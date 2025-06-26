@@ -1,0 +1,98 @@
+Slide 1: Title Slide
+Title: Huffman Coding for File Compression
+Subtitle: Efficient Text Compression using Huffman Encoding
+
+Slide 2: Introduction
+Subtitle: What is Huffman Coding?
+
+Huffman coding is a lossless data compression algorithm.
+It assigns variable-length binary codes to characters based on their frequency.
+More frequent characters get shorter codes, reducing overall file size.
+Slide 3: How Huffman Coding Works
+Subtitle: Key Steps in Huffman Encoding
+
+Calculate character frequencies in the input text.
+Build a min-heap (priority queue) from character frequencies.
+Construct a Huffman tree using a greedy approach.
+Generate Huffman codes for each character.
+Encode the text using the generated codes.
+Save the encoded output to a file.
+Slide 4: Huffman Tree Construction
+Subtitle: Creating the Huffman Tree
+
+Start with leaf nodes for each character.
+Extract two nodes with the smallest frequencies.
+Merge them into a new node with combined frequency.
+Repeat until only one node (root) remains.
+The tree structure determines binary codes.
+Slide 5: Example of Huffman Encoding
+Subtitle: Encoding a Simple Text
+Example: "ABBCCCDDDD"
+
+Frequencies: A(1), B(2), C(3), D(4)
+Huffman Tree assigns shorter codes to more frequent characters.
+Encoded output: 1100111010100 (example)
+Slide 6: Implementation Overview
+Subtitle: Code Structure Breakdown
+
+MinHeapNode Structure: Stores characters and frequencies.
+Min Heap Operations: Insert, extract minimum, heapify.
+Huffman Tree Construction: Merging nodes to form the tree.
+Code Storage: Storing Huffman codes in an array.
+File Compression: Converting input text to encoded form.
+Slide 7: Time Complexity Analysis
+Subtitle: Complexity of Each Step
+
+Building Frequency Table: O(n)
+Creating Min-Heap: O(n log n)
+Building Huffman Tree: O(n log n)
+Generating Codes: O(n)
+Encoding the File: O(n)
+Writing Output: O(n)
+Overall Complexity: O(n log n)
+
+Slide 8: File Compression & Results
+Subtitle: Evaluating Compression Efficiency
+
+Original File Size = 8 bits per character
+Encoded File Size = Variable bit lengths based on frequency
+Compression Ratio Formula:
+Compression Ratio
+=
+Original Size
+−
+Compressed Size
+Original Size
+×
+100
+%
+Compression Ratio= 
+Original Size
+Original Size−Compressed Size
+​
+ ×100%
+Higher frequency characters reduce overall bit usage.
+Slide 9: Advantages & Limitations
+Subtitle: Pros and Cons of Huffman Coding
+✅ Advantages:
+
+Lossless compression (no data loss).
+Efficient for text-based data.
+Simple and effective tree-based approach.
+❌ Limitations:
+
+Not optimal for very small files.
+Requires preprocessing (frequency calculation).
+Static Huffman coding does not adapt dynamically.
+Slide 10: Conclusion & Applications
+Subtitle: Where is Huffman Coding Used?
+
+File Compression (ZIP, GZIP)
+Image & Video Encoding (JPEG, MP3)
+Network Data Transmission (Efficient Packet Encoding)
+Compiler Optimization (Token Compression)
+Huffman Coding is a fundamental technique for efficient storage and transmission of data.
+
+Slide 11: Thank You!
+Subtitle: Questions?
+End the presentation with a Q&A session or discussion.
